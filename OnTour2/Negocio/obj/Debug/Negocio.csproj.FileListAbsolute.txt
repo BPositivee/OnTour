@@ -9,3 +9,14 @@ c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Negocio\bin\Debu
 c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Negocio\obj\Debug\Negocio.dll
 c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Negocio\obj\Debug\Negocio.pdb
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Negocio\bin\Debug\Negocio.dll.config
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Negocio\bin\Debug\Negocio.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Negocio\bin\Debug\Negocio.pdb
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Negocio\bin\Debug\DALC.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Negocio\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Negocio\bin\Debug\DALC.pdb
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Negocio\obj\Debug\Negocio.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Negocio\obj\Debug\Negocio.pdb

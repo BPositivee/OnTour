@@ -38,3 +38,43 @@ c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Presentacion\bin
 c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
 c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Presentacion\obj\Debug\Presentacion.dll
 c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\ApplicationInsights.config
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\roslyn\csc.exe
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\roslyn\vbc.exe
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\roslyn\VBCSCompiler.exe
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Presentacion.dll.config
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Presentacion.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Presentacion.pdb
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\EntityFramework.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Microsoft.AI.Web.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Microsoft.ApplicationInsights.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Negocio.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Oracle.ManagedDataAccess.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\DALC.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Negocio.pdb
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\EntityFramework.xml
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Microsoft.AI.Web.xml
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Microsoft.ApplicationInsights.xml
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\bin\DALC.pdb
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\obj\Debug\Presentacion.dll
+C:\Users\FabianPC\Source\Repos\OnTour2\OnTour2\Presentacion\obj\Debug\Presentacion.pdb
