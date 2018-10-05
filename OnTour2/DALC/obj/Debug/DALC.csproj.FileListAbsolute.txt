@@ -1,0 +1,9 @@
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\DALC\bin\Debug\DALC.dll.config
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\DALC\bin\Debug\DALC.dll
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\DALC\bin\Debug\DALC.pdb
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\DALC\bin\Debug\EntityFramework.dll
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\DALC\bin\Debug\Oracle.ManagedDataAccess.dll
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\DALC\bin\Debug\EntityFramework.xml
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\DALC\obj\Debug\DALC.dll
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\DALC\obj\Debug\DALC.pdb
+C:\Users\FabianPC\documents\visual studio 2015\Projects\OnTour2\DALC\obj\Debug\DALC.csprojResolveAssemblyReference.cache

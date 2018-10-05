@@ -1,0 +1,11 @@
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Negocio\bin\Debug\Negocio.dll.config
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Negocio\bin\Debug\Negocio.dll
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Negocio\bin\Debug\Negocio.pdb
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Negocio\bin\Debug\DALC.dll
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Negocio\bin\Debug\EntityFramework.dll
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Negocio\bin\Debug\Oracle.ManagedDataAccess.dll
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Negocio\bin\Debug\DALC.pdb
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Negocio\bin\Debug\EntityFramework.xml
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Negocio\obj\Debug\Negocio.dll
+c:\users\fabianpc\documents\visual studio 2015\Projects\OnTour2\Negocio\obj\Debug\Negocio.pdb

@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="ACTIVIDADES_TOUR">
+      <EntityTypeMapping TypeName="Model.ACTIVIDADES_TOUR">
+        <MappingFragment StoreEntitySet="ACTIVIDADES_TOUR">
+          <ScalarProperty Name="ACTIVIDADES_ID" ColumnName="ACTIVIDADES_ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="TOURS_TOURS_ID" ColumnName="TOURS_TOURS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AGENTEs">
+      <EntityTypeMapping TypeName="Model.AGENTE">
+        <MappingFragment StoreEntitySet="AGENTE">
+          <ScalarProperty Name="AGENTE_ID" ColumnName="AGENTE_ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="AP_PATERNO" ColumnName="AP_PATERNO" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ALUMNOS">
+      <EntityTypeMapping TypeName="Model.ALUMNO">
+        <MappingFragment StoreEntitySet="ALUMNOS">
+          <ScalarProperty Name="ALUMNOS_ID" ColumnName="ALUMNOS_ID" />
+          <ScalarProperty Name="AP_PATERNO" ColumnName="AP_PATERNO" />
+          <ScalarProperty Name="AP_MATERNO" ColumnName="AP_MATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="RUT" ColumnName="RUT" />
+          <ScalarProperty Name="FECHA_NAC" ColumnName="FECHA_NAC" />
+          <ScalarProperty Name="CURSOS_CURSOS_ID" ColumnName="CURSOS_CURSOS_ID" />
+          <ScalarProperty Name="APODERADOS_APODERADOS_ID" ColumnName="APODERADOS_APODERADOS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APODERADOS">
+      <EntityTypeMapping TypeName="Model.APODERADO">
+        <MappingFragment StoreEntitySet="APODERADOS">
+          <ScalarProperty Name="APODERADOS_ID" ColumnName="APODERADOS_ID" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="AP_PATERNO" ColumnName="AP_PATERNO" />
+          <ScalarProperty Name="AP_MATERNO" ColumnName="AP_MATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COLEGIOS">
+      <EntityTypeMapping TypeName="Model.COLEGIO">
+        <MappingFragment StoreEntitySet="COLEGIOS">
+          <ScalarProperty Name="COLEGIOS_ID" ColumnName="COLEGIOS_ID" />
+          <ScalarProperty Name="NOMBRE_COLEGIO" ColumnName="NOMBRE_COLEGIO" />
+          <ScalarProperty Name="CURSOS_CURSOS_ID" ColumnName="CURSOS_CURSOS_ID" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTRATOS">
+      <EntityTypeMapping TypeName="Model.CONTRATO">
+        <MappingFragment StoreEntitySet="CONTRATOS">
+          <ScalarProperty Name="CONTRATOS_ID" ColumnName="CONTRATOS_ID" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="NOMBRE_COLEGIO" ColumnName="NOMBRE_COLEGIO" />
+          <ScalarProperty Name="SUBTOTAL" ColumnName="SUBTOTAL" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="TOURS_TOURS_ID" ColumnName="TOURS_TOURS_ID" />
+          <ScalarProperty Name="AGENTE_AGENTE_ID" ColumnName="AGENTE_AGENTE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CURSOS">
+      <EntityTypeMapping TypeName="Model.CURSO">
+        <MappingFragment StoreEntitySet="CURSOS">
+          <ScalarProperty Name="CURSOS_ID" ColumnName="CURSOS_ID" />
+          <ScalarProperty Name="NOMBRE_CURSO" ColumnName="NOMBRE_CURSO" />
+          <ScalarProperty Name="ENCARGADOS_ENCARGADOS_ID" ColumnName="ENCARGADOS_ENCARGADOS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DESTINOS">
+      <EntityTypeMapping TypeName="Model.DESTINO">
+        <MappingFragment StoreEntitySet="DESTINOS">
+          <ScalarProperty Name="DESTINOS_ID" ColumnName="DESTINOS_ID" />
+          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+          <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ENCARGADOS">
+      <EntityTypeMapping TypeName="Model.ENCARGADO">
+        <MappingFragment StoreEntitySet="ENCARGADOS">
+          <ScalarProperty Name="ENCARGADOS_ID" ColumnName="ENCARGADOS_ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="AP_PATERNO" ColumnName="AP_PATERNO" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="AGENTE_AGENTE_ID" ColumnName="AGENTE_AGENTE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAGOS">
+      <EntityTypeMapping TypeName="Model.PAGO">
+        <MappingFragment StoreEntitySet="PAGOS">
+          <ScalarProperty Name="PAGOS_ID" ColumnName="PAGOS_ID" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="MONTO" ColumnName="MONTO" />
+          <ScalarProperty Name="CONTRATOS_CONTRATOS_ID" ColumnName="CONTRATOS_CONTRATOS_ID" />
+          <ScalarProperty Name="APODERADOS_APODERADOS_ID" ColumnName="APODERADOS_APODERADOS_ID" />
+          <ScalarProperty Name="ENCARGADOS_ENCARGADOS_ID" ColumnName="ENCARGADOS_ENCARGADOS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POLIZAS">
+      <EntityTypeMapping TypeName="Model.POLIZA">
+        <MappingFragment StoreEntitySet="POLIZAS">
+          <ScalarProperty Name="POLIZAS_ID" ColumnName="POLIZAS_ID" />
+          <ScalarProperty Name="FECHA_COBERTURA" ColumnName="FECHA_COBERTURA" />
+          <ScalarProperty Name="SUMA_ASEGURADA" ColumnName="SUMA_ASEGURADA" />
+          <ScalarProperty Name="PRIMA" ColumnName="PRIMA" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICIOS_ADICIONALES">
+      <EntityTypeMapping TypeName="Model.SERVICIOS_ADICIONALES">
+        <MappingFragment StoreEntitySet="SERVICIOS_ADICIONALES">
+          <ScalarProperty Name="SERVICIOS_ID" ColumnName="SERVICIOS_ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="CONTRATOS_CONTRATOS_ID" ColumnName="CONTRATOS_CONTRATOS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TOURS">
+      <EntityTypeMapping TypeName="Model.TOUR">
+        <MappingFragment StoreEntitySet="TOURS">
+          <ScalarProperty Name="TOURS_ID" ColumnName="TOURS_ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="PRECIO_BASE" ColumnName="PRECIO_BASE" />
+          <ScalarProperty Name="DIAS" ColumnName="DIAS" />
+          <ScalarProperty Name="DESTINOS_DESTINOS_ID" ColumnName="DESTINOS_DESTINOS_ID" />
+          <ScalarProperty Name="PRECIO_TOTAL" ColumnName="PRECIO_TOTAL" />
+          <ScalarProperty Name="POLIZAS_POLIZAS_ID" ColumnName="POLIZAS_POLIZAS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AgregarApoderado" FunctionName="Model.Store.PKG_APODERADOS_AGREGAR_APODERADO" />
+  </EntityContainerMapping>
+</Mapping>

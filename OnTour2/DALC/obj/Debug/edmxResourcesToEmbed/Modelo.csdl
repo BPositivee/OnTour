@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ACTIVIDADES_TOUR">
+    <Key>
+      <PropertyRef Name="ACTIVIDADES_ID" />
+    </Key>
+    <Property Name="ACTIVIDADES_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="TOURS_TOURS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="TOUR" Relationship="Self.ACTIVIDADES_TOUR_TOURS_FK" FromRole="ACTIVIDADES_TOUR" ToRole="TOURS" />
+  </EntityType>
+  <EntityType Name="AGENTE">
+    <Key>
+      <PropertyRef Name="AGENTE_ID" />
+    </Key>
+    <Property Name="AGENTE_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AP_PATERNO" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="USERNAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CONTRATOS" Relationship="Self.CONTRATOS_AGENTE_FK" FromRole="AGENTE" ToRole="CONTRATOS" />
+    <NavigationProperty Name="ENCARGADOS" Relationship="Self.ENCARGADOS_AGENTE_FK" FromRole="AGENTE" ToRole="ENCARGADOS" />
+  </EntityType>
+  <EntityType Name="ALUMNO">
+    <Key>
+      <PropertyRef Name="ALUMNOS_ID" />
+    </Key>
+    <Property Name="ALUMNOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="AP_PATERNO" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AP_MATERNO" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RUT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FECHA_NAC" Type="DateTime" Nullable="false" />
+    <Property Name="CURSOS_CURSOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="APODERADOS_APODERADOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="APODERADO" Relationship="Self.ALUMNOS_APODERADOS_FK" FromRole="ALUMNOS" ToRole="APODERADOS" />
+    <NavigationProperty Name="CURSO" Relationship="Self.ALUMNOS_CURSOS_FK" FromRole="ALUMNOS" ToRole="CURSOS" />
+  </EntityType>
+  <EntityType Name="APODERADO">
+    <Key>
+      <PropertyRef Name="APODERADOS_ID" />
+    </Key>
+    <Property Name="APODERADOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="USERNAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AP_PATERNO" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AP_MATERNO" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="CELULAR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ALUMNOS" Relationship="Self.ALUMNOS_APODERADOS_FK" FromRole="APODERADOS" ToRole="ALUMNOS" />
+    <NavigationProperty Name="PAGOS" Relationship="Self.PAGOS_APODERADOS_FK" FromRole="APODERADOS" ToRole="PAGOS" />
+  </EntityType>
+  <EntityType Name="COLEGIO">
+    <Key>
+      <PropertyRef Name="COLEGIOS_ID" />
+    </Key>
+    <Property Name="COLEGIOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE_COLEGIO" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CURSOS_CURSOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CURSO" Relationship="Self.COLEGIOS_CURSOS_FK" FromRole="COLEGIOS" ToRole="CURSOS" />
+  </EntityType>
+  <EntityType Name="CONTRATO">
+    <Key>
+      <PropertyRef Name="CONTRATOS_ID" />
+    </Key>
+    <Property Name="CONTRATOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FECHA" Type="DateTime" Nullable="false" />
+    <Property Name="NOMBRE_COLEGIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SUBTOTAL" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TOTAL" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TOURS_TOURS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="AGENTE_AGENTE_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="AGENTE" Relationship="Self.CONTRATOS_AGENTE_FK" FromRole="CONTRATOS" ToRole="AGENTE" />
+    <NavigationProperty Name="TOUR" Relationship="Self.CONTRATOS_TOURS_FK" FromRole="CONTRATOS" ToRole="TOURS" />
+    <NavigationProperty Name="PAGOS" Relationship="Self.PAGOS_CONTRATOS_FK" FromRole="CONTRATOS" ToRole="PAGOS" />
+    <NavigationProperty Name="SERVICIOS_ADICIONALES" Relationship="Self.SERVICIOS_CONTRATOS_FK" FromRole="CONTRATOS" ToRole="SERVICIOS_ADICIONALES" />
+  </EntityType>
+  <EntityType Name="CURSO">
+    <Key>
+      <PropertyRef Name="CURSOS_ID" />
+    </Key>
+    <Property Name="CURSOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE_CURSO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ENCARGADOS_ENCARGADOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="ALUMNOS" Relationship="Self.ALUMNOS_CURSOS_FK" FromRole="CURSOS" ToRole="ALUMNOS" />
+    <NavigationProperty Name="COLEGIOS" Relationship="Self.COLEGIOS_CURSOS_FK" FromRole="CURSOS" ToRole="COLEGIOS" />
+    <NavigationProperty Name="ENCARGADO" Relationship="Self.CURSOS_ENCARGADOS_FK" FromRole="CURSOS" ToRole="ENCARGADOS" />
+  </EntityType>
+  <EntityType Name="DESTINO">
+    <Key>
+      <PropertyRef Name="DESTINOS_ID" />
+    </Key>
+    <Property Name="DESTINOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CIUDAD" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PAIS" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="TOURS" Relationship="Self.TOURS_DESTINOS_FK" FromRole="DESTINOS" ToRole="TOURS" />
+  </EntityType>
+  <EntityType Name="ENCARGADO">
+    <Key>
+      <PropertyRef Name="ENCARGADOS_ID" />
+    </Key>
+    <Property Name="ENCARGADOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AP_PATERNO" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="USERNAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AGENTE_AGENTE_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="AGENTE" Relationship="Self.ENCARGADOS_AGENTE_FK" FromRole="ENCARGADOS" ToRole="AGENTE" />
+    <NavigationProperty Name="CURSOS" Relationship="Self.CURSOS_ENCARGADOS_FK" FromRole="ENCARGADOS" ToRole="CURSOS" />
+    <NavigationProperty Name="PAGOS" Relationship="Self.PAGOS_ENCARGADOS_FK" FromRole="ENCARGADOS" ToRole="PAGOS" />
+  </EntityType>
+  <EntityType Name="PAGO">
+    <Key>
+      <PropertyRef Name="PAGOS_ID" />
+    </Key>
+    <Property Name="PAGOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FECHA" Type="DateTime" Nullable="false" />
+    <Property Name="MONTO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CONTRATOS_CONTRATOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="APODERADOS_APODERADOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ENCARGADOS_ENCARGADOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="APODERADO" Relationship="Self.PAGOS_APODERADOS_FK" FromRole="PAGOS" ToRole="APODERADOS" />
+    <NavigationProperty Name="CONTRATO" Relationship="Self.PAGOS_CONTRATOS_FK" FromRole="PAGOS" ToRole="CONTRATOS" />
+    <NavigationProperty Name="ENCARGADO" Relationship="Self.PAGOS_ENCARGADOS_FK" FromRole="PAGOS" ToRole="ENCARGADOS" />
+  </EntityType>
+  <EntityType Name="POLIZA">
+    <Key>
+      <PropertyRef Name="POLIZAS_ID" />
+    </Key>
+    <Property Name="POLIZAS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FECHA_COBERTURA" Type="DateTime" Nullable="false" />
+    <Property Name="SUMA_ASEGURADA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PRIMA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="TOURS" Relationship="Self.TOURS_POLIZAS_FK" FromRole="POLIZAS" ToRole="TOURS" />
+  </EntityType>
+  <EntityType Name="SERVICIOS_ADICIONALES">
+    <Key>
+      <PropertyRef Name="SERVICIOS_ID" />
+    </Key>
+    <Property Name="SERVICIOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PRECIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TIPO" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CONTRATOS_CONTRATOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="CONTRATO" Relationship="Self.SERVICIOS_CONTRATOS_FK" FromRole="SERVICIOS_ADICIONALES" ToRole="CONTRATOS" />
+  </EntityType>
+  <EntityType Name="TOUR">
+    <Key>
+      <PropertyRef Name="TOURS_ID" />
+    </Key>
+    <Property Name="TOURS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PRECIO_BASE" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DIAS" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESTINOS_DESTINOS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PRECIO_TOTAL" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="POLIZAS_POLIZAS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="ACTIVIDADES_TOUR" Relationship="Self.ACTIVIDADES_TOUR_TOURS_FK" FromRole="TOURS" ToRole="ACTIVIDADES_TOUR" />
+    <NavigationProperty Name="CONTRATOS" Relationship="Self.CONTRATOS_TOURS_FK" FromRole="TOURS" ToRole="CONTRATOS" />
+    <NavigationProperty Name="DESTINO" Relationship="Self.TOURS_DESTINOS_FK" FromRole="TOURS" ToRole="DESTINOS" />
+    <NavigationProperty Name="POLIZA" Relationship="Self.TOURS_POLIZAS_FK" FromRole="TOURS" ToRole="POLIZAS" />
+  </EntityType>
+  <Association Name="ACTIVIDADES_TOUR_TOURS_FK">
+    <End Role="TOURS" Type="Self.TOUR" Multiplicity="1" />
+    <End Role="ACTIVIDADES_TOUR" Type="Self.ACTIVIDADES_TOUR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TOURS">
+        <PropertyRef Name="TOURS_ID" />
+      </Principal>
+      <Dependent Role="ACTIVIDADES_TOUR">
+        <PropertyRef Name="TOURS_TOURS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CONTRATOS_AGENTE_FK">
+    <End Role="AGENTE" Type="Self.AGENTE" Multiplicity="1" />
+    <End Role="CONTRATOS" Type="Self.CONTRATO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AGENTE">
+        <PropertyRef Name="AGENTE_ID" />
+      </Principal>
+      <Dependent Role="CONTRATOS">
+        <PropertyRef Name="AGENTE_AGENTE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ENCARGADOS_AGENTE_FK">
+    <End Role="AGENTE" Type="Self.AGENTE" Multiplicity="1" />
+    <End Role="ENCARGADOS" Type="Self.ENCARGADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AGENTE">
+        <PropertyRef Name="AGENTE_ID" />
+      </Principal>
+      <Dependent Role="ENCARGADOS">
+        <PropertyRef Name="AGENTE_AGENTE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ALUMNOS_APODERADOS_FK">
+    <End Role="APODERADOS" Type="Self.APODERADO" Multiplicity="1" />
+    <End Role="ALUMNOS" Type="Self.ALUMNO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APODERADOS">
+        <PropertyRef Name="APODERADOS_ID" />
+      </Principal>
+      <Dependent Role="ALUMNOS">
+        <PropertyRef Name="APODERADOS_APODERADOS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ALUMNOS_CURSOS_FK">
+    <End Role="CURSOS" Type="Self.CURSO" Multiplicity="1" />
+    <End Role="ALUMNOS" Type="Self.ALUMNO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CURSOS">
+        <PropertyRef Name="CURSOS_ID" />
+      </Principal>
+      <Dependent Role="ALUMNOS">
+        <PropertyRef Name="CURSOS_CURSOS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PAGOS_APODERADOS_FK">
+    <End Role="APODERADOS" Type="Self.APODERADO" Multiplicity="1" />
+    <End Role="PAGOS" Type="Self.PAGO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APODERADOS">
+        <PropertyRef Name="APODERADOS_ID" />
+      </Principal>
+      <Dependent Role="PAGOS">
+        <PropertyRef Name="APODERADOS_APODERADOS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COLEGIOS_CURSOS_FK">
+    <End Role="CURSOS" Type="Self.CURSO" Multiplicity="1" />
+    <End Role="COLEGIOS" Type="Self.COLEGIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CURSOS">
+        <PropertyRef Name="CURSOS_ID" />
+      </Principal>
+      <Dependent Role="COLEGIOS">
+        <PropertyRef Name="CURSOS_CURSOS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CONTRATOS_TOURS_FK">
+    <End Role="TOURS" Type="Self.TOUR" Multiplicity="1" />
+    <End Role="CONTRATOS" Type="Self.CONTRATO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TOURS">
+        <PropertyRef Name="TOURS_ID" />
+      </Principal>
+      <Dependent Role="CONTRATOS">
+        <PropertyRef Name="TOURS_TOURS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PAGOS_CONTRATOS_FK">
+    <End Role="CONTRATOS" Type="Self.CONTRATO" Multiplicity="1" />
+    <End Role="PAGOS" Type="Self.PAGO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTRATOS">
+        <PropertyRef Name="CONTRATOS_ID" />
+      </Principal>
+      <Dependent Role="PAGOS">
+        <PropertyRef Name="CONTRATOS_CONTRATOS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SERVICIOS_CONTRATOS_FK">
+    <End Role="CONTRATOS" Type="Self.CONTRATO" Multiplicity="1" />
+    <End Role="SERVICIOS_ADICIONALES" Type="Self.SERVICIOS_ADICIONALES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTRATOS">
+        <PropertyRef Name="CONTRATOS_ID" />
+      </Principal>
+      <Dependent Role="SERVICIOS_ADICIONALES">
+        <PropertyRef Name="CONTRATOS_CONTRATOS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CURSOS_ENCARGADOS_FK">
+    <End Role="ENCARGADOS" Type="Self.ENCARGADO" Multiplicity="1" />
+    <End Role="CURSOS" Type="Self.CURSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ENCARGADOS">
+        <PropertyRef Name="ENCARGADOS_ID" />
+      </Principal>
+      <Dependent Role="CURSOS">
+        <PropertyRef Name="ENCARGADOS_ENCARGADOS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TOURS_DESTINOS_FK">
+    <End Role="DESTINOS" Type="Self.DESTINO" Multiplicity="1" />
+    <End Role="TOURS" Type="Self.TOUR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DESTINOS">
+        <PropertyRef Name="DESTINOS_ID" />
+      </Principal>
+      <Dependent Role="TOURS">
+        <PropertyRef Name="DESTINOS_DESTINOS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PAGOS_ENCARGADOS_FK">
+    <End Role="ENCARGADOS" Type="Self.ENCARGADO" Multiplicity="1" />
+    <End Role="PAGOS" Type="Self.PAGO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ENCARGADOS">
+        <PropertyRef Name="ENCARGADOS_ID" />
+      </Principal>
+      <Dependent Role="PAGOS">
+        <PropertyRef Name="ENCARGADOS_ENCARGADOS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TOURS_POLIZAS_FK">
+    <End Role="POLIZAS" Type="Self.POLIZA" Multiplicity="1" />
+    <End Role="TOURS" Type="Self.TOUR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POLIZAS">
+        <PropertyRef Name="POLIZAS_ID" />
+      </Principal>
+      <Dependent Role="TOURS">
+        <PropertyRef Name="POLIZAS_POLIZAS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ACTIVIDADES_TOUR" EntityType="Self.ACTIVIDADES_TOUR" />
+    <EntitySet Name="AGENTEs" EntityType="Self.AGENTE" />
+    <EntitySet Name="ALUMNOS" EntityType="Self.ALUMNO" />
+    <EntitySet Name="APODERADOS" EntityType="Self.APODERADO" />
+    <EntitySet Name="COLEGIOS" EntityType="Self.COLEGIO" />
+    <EntitySet Name="CONTRATOS" EntityType="Self.CONTRATO" />
+    <EntitySet Name="CURSOS" EntityType="Self.CURSO" />
+    <EntitySet Name="DESTINOS" EntityType="Self.DESTINO" />
+    <EntitySet Name="ENCARGADOS" EntityType="Self.ENCARGADO" />
+    <EntitySet Name="PAGOS" EntityType="Self.PAGO" />
+    <EntitySet Name="POLIZAS" EntityType="Self.POLIZA" />
+    <EntitySet Name="SERVICIOS_ADICIONALES" EntityType="Self.SERVICIOS_ADICIONALES" />
+    <EntitySet Name="TOURS" EntityType="Self.TOUR" />
+    <AssociationSet Name="ACTIVIDADES_TOUR_TOURS_FK" Association="Self.ACTIVIDADES_TOUR_TOURS_FK">
+      <End Role="TOURS" EntitySet="TOURS" />
+      <End Role="ACTIVIDADES_TOUR" EntitySet="ACTIVIDADES_TOUR" />
+    </AssociationSet>
+    <AssociationSet Name="CONTRATOS_AGENTE_FK" Association="Self.CONTRATOS_AGENTE_FK">
+      <End Role="AGENTE" EntitySet="AGENTEs" />
+      <End Role="CONTRATOS" EntitySet="CONTRATOS" />
+    </AssociationSet>
+    <AssociationSet Name="ENCARGADOS_AGENTE_FK" Association="Self.ENCARGADOS_AGENTE_FK">
+      <End Role="AGENTE" EntitySet="AGENTEs" />
+      <End Role="ENCARGADOS" EntitySet="ENCARGADOS" />
+    </AssociationSet>
+    <AssociationSet Name="ALUMNOS_APODERADOS_FK" Association="Self.ALUMNOS_APODERADOS_FK">
+      <End Role="APODERADOS" EntitySet="APODERADOS" />
+      <End Role="ALUMNOS" EntitySet="ALUMNOS" />
+    </AssociationSet>
+    <AssociationSet Name="ALUMNOS_CURSOS_FK" Association="Self.ALUMNOS_CURSOS_FK">
+      <End Role="CURSOS" EntitySet="CURSOS" />
+      <End Role="ALUMNOS" EntitySet="ALUMNOS" />
+    </AssociationSet>
+    <AssociationSet Name="PAGOS_APODERADOS_FK" Association="Self.PAGOS_APODERADOS_FK">
+      <End Role="APODERADOS" EntitySet="APODERADOS" />
+      <End Role="PAGOS" EntitySet="PAGOS" />
+    </AssociationSet>
+    <AssociationSet Name="COLEGIOS_CURSOS_FK" Association="Self.COLEGIOS_CURSOS_FK">
+      <End Role="CURSOS" EntitySet="CURSOS" />
+      <End Role="COLEGIOS" EntitySet="COLEGIOS" />
+    </AssociationSet>
+    <AssociationSet Name="CONTRATOS_TOURS_FK" Association="Self.CONTRATOS_TOURS_FK">
+      <End Role="TOURS" EntitySet="TOURS" />
+      <End Role="CONTRATOS" EntitySet="CONTRATOS" />
+    </AssociationSet>
+    <AssociationSet Name="PAGOS_CONTRATOS_FK" Association="Self.PAGOS_CONTRATOS_FK">
+      <End Role="CONTRATOS" EntitySet="CONTRATOS" />
+      <End Role="PAGOS" EntitySet="PAGOS" />
+    </AssociationSet>
+    <AssociationSet Name="SERVICIOS_CONTRATOS_FK" Association="Self.SERVICIOS_CONTRATOS_FK">
+      <End Role="CONTRATOS" EntitySet="CONTRATOS" />
+      <End Role="SERVICIOS_ADICIONALES" EntitySet="SERVICIOS_ADICIONALES" />
+    </AssociationSet>
+    <AssociationSet Name="CURSOS_ENCARGADOS_FK" Association="Self.CURSOS_ENCARGADOS_FK">
+      <End Role="ENCARGADOS" EntitySet="ENCARGADOS" />
+      <End Role="CURSOS" EntitySet="CURSOS" />
+    </AssociationSet>
+    <AssociationSet Name="TOURS_DESTINOS_FK" Association="Self.TOURS_DESTINOS_FK">
+      <End Role="DESTINOS" EntitySet="DESTINOS" />
+      <End Role="TOURS" EntitySet="TOURS" />
+    </AssociationSet>
+    <AssociationSet Name="PAGOS_ENCARGADOS_FK" Association="Self.PAGOS_ENCARGADOS_FK">
+      <End Role="ENCARGADOS" EntitySet="ENCARGADOS" />
+      <End Role="PAGOS" EntitySet="PAGOS" />
+    </AssociationSet>
+    <AssociationSet Name="TOURS_POLIZAS_FK" Association="Self.TOURS_POLIZAS_FK">
+      <End Role="POLIZAS" EntitySet="POLIZAS" />
+      <End Role="TOURS" EntitySet="TOURS" />
+    </AssociationSet>
+    <FunctionImport Name="AgregarApoderado">
+      <Parameter Name="A_APODERADO_ID" Mode="In" Type="Decimal" />
+      <Parameter Name="A_USERNAME" Mode="In" Type="String" />
+      <Parameter Name="A_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="A_AP_PATERNO" Mode="In" Type="String" />
+      <Parameter Name="A_AP_MATERNO" Mode="In" Type="String" />
+      <Parameter Name="A_NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="A_TELEFONO" Mode="In" Type="String" />
+      <Parameter Name="A_CELULAR" Mode="In" Type="String" />
+      <Parameter Name="A_PASSWORD" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>
